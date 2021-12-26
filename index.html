@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>multiverso</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<a-assets>
+    <img id=“jaw” src="./jaw.jpg"> 
+    <video id="tortugas" autoplay loop="true" src="./tortugas.mp4"></video>
+    <a-assets-item id="mozart" src="./mozart.gltf"></a-assets-item>
+    <a-assets-item id="salero" src="./salero.gltf"></a-assets-item>
+  
+</a-assets>
+<body>
+    <a-scene>
+        <a-entity environment="preset: forest"></a-entity>
+        <a-image src= "#jaw" material="side: double; alphatest: 0.5s" scale= "10 10 10" position="10.004 5.012 -10.126" rotation= "0.00  90.00  0.00"></a-image>
+        <a-video src="#tortugas" rotation="0 0 0" width="10" height="15" position="-0.086 4.401 -14.269"></a-video>
+        <a-sound src="src: url(bestiario.mp3)" autoplay="true" loop= "true" volume=".9" position="0 0 -14.200"></a-sound>
+        <a-entity gltf-model="#mozart" position="-0.208 0.015 -4.209" animation= "property: rotation; to: 0  360  0; loop: true;  dur: 4000" scale="1  1  1"></a-entity> 
+        <a-entity gltf-model="#salero" position="-4.367 0.015 -4.209"  scale="1  1  1"></a-entity> 
+
+        
+    </a-scene>  
+</body>
+</html>
